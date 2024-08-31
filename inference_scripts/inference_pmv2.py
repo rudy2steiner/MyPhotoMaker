@@ -23,14 +23,15 @@ try:
 except:
     device = "cpu"
 
-torch_dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+torch_dtype =  torch.float16
 if device == "mps":
     torch_dtype = torch.float16
 
 output_dir = "./outputs"
 os.makedirs(output_dir, exist_ok=True)
 
-photomaker_ckpt = hf_hub_download(repo_id="TencentARC/PhotoMaker-V2", filename="photomaker-v2.bin", repo_type="model")
+# photomaker_ckpt = hf_hub_download(repo_id="TencentARC/PhotoMaker-V2", filename="photomaker-v2.bin", repo_type="model")
+photomaker_ckpt='/Users/rudy/Documents/model/photomaker-v2.bin'
 
 prompt = "instagram photo, portrait photo of a woman img, colorful, perfect face, natural skin, hard shadows, film grain, best quality"
 negative_prompt = "(asymmetry, worst quality, low quality, illustration, 3d, 2d, painting, cartoons, sketch), open mouth"

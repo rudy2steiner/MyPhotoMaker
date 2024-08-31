@@ -107,6 +107,8 @@ The model will be automatically downloaded through the following two lines:
 ```python
 from huggingface_hub import hf_hub_download
 photomaker_path = hf_hub_download(repo_id="TencentARC/PhotoMaker", filename="photomaker-v1.bin", repo_type="model")
+# huggingface-cli download --resume-download SG161222/RealVisXL_V4.0 --local-dir /Users/rudy/Documents/model
+
 ```
 
 You can also choose to download manually from this [url](https://huggingface.co/TencentARC/PhotoMaker).

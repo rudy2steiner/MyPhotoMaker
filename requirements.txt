@@ -1,6 +1,6 @@
 torch
 torchvision
-diffusers
+diffusers==0.29.2
 transformers
 huggingface-hub
 spaces

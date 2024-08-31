@@ -40,9 +40,10 @@ ASPECT_RATIO_LABELS = list(aspect_ratios)
 DEFAULT_ASPECT_RATIO = ASPECT_RATIO_LABELS[0]
 
 enable_doodle_arg = False
-photomaker_ckpt = hf_hub_download(repo_id="TencentARC/PhotoMaker-V2", filename="photomaker-v2.bin", repo_type="model")
+# photomaker_ckpt = hf_hub_download(repo_id="TencentARC/PhotoMaker-V2", filename="photomaker-v2.bin", repo_type="model")
+photomaker_ckpt='/Users/rudy/Documents/model/photomaker-v2.bin'
 
-torch_dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+torch_dtype =  torch.float16
 if device == "mps":
     torch_dtype = torch.float16
     
